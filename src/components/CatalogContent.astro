@@ -1,0 +1,120 @@
+---
+const products = [
+  { name: 'Cухофрукты', price: '100₽', image: '/images/izum.jpg' },
+  { name: 'Орехи', price: '200₽', image: '/images/orehi.jpg' },
+  { name: 'Цукаты', price: '200₽', image: '/images/perec.jpg' },
+  { name: 'Сладости', price: '100₽', image: '/images/izum.jpg' },
+  { name: 'Семена', price: '200₽', image: '/images/orehi.jpg' },
+];
+---
+<nav>
+  {products.map(product => (
+    <div>
+      <img 
+        src={product.image} 
+        alt={product.name} 
+      />
+      <div class="overlay"></div>
+      <p class="prod_name">{product.name}</p>
+      <p class="SumTov">{products.length} товаров</p>
+    </div>
+  ))}
+</nav>
+
+<style>
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    width: 65%;
+    margin: 0 auto;
+    margin-top: 20px;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  div {
+    display: flex;
+    flex-flow: column;
+    flex: 1 1 20%;
+    max-width: 250px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  }
+
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    border-radius: 10px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.788), transparent);
+  }
+
+  .prod_name {
+    font-size: 26px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+  }
+
+  .SumTov {
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    top: 70%;
+    left: 20%;
+  }
+
+  /* 💡 Адаптивность */
+  @media (max-width: 1024px) {
+    div {
+      flex: 1 1 40%;
+      max-width: 45%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    nav {
+      width: 90%;
+    }
+    div {
+      flex: 1 1 90%;
+      max-width: 100%;
+    }
+    .prod_name {
+      font-size: 20px;
+      top: 50%;
+      left: 10%;
+    }
+    .SumTov {
+      font-size: 16px;
+      top: 70%;
+      left: 10%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .prod_name {
+      font-size: 18px;
+    }
+    .SumTov {
+      font-size: 14px;
+    }
+    img {
+      max-height: 160px;
+    }
+  }
+</style>

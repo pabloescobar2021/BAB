@@ -1,0 +1,41 @@
+<header>
+  <a href="/">Главная</a> 
+  <a style="margin-left: 60px;" href="/catalog">Каталог</a>
+  <a style="margin-left: 60px;" href="/catalog">О нас</a>
+  <a style="margin-left: 60px;"href="/catalog">Контакты</a>
+</header>
+
+
+<style>
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+}
+header {
+    display: flex;
+    background-color: #f4f4f4;
+    padding: 20px 40px;
+    color: white;
+    align-items: center;
+    justify-content:center;
+    width: 65%;
+    margin: 0 auto;
+}
+header a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+}
+
+header a:hover {
+    opacity: 0.7;
+    }
+
+@media (max-width: 426px){
+    header{
+        font-size: 13px;
+    }
+}
+</style>

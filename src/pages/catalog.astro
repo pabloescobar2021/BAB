@@ -1,12 +1,9 @@
 ---
 import Header from "../components/Header.astro"
-import Base from "../components/Base.astro"
-import CatalogContent from "../components/CatalogContent.astro"
-import FooterContent from "../components/FooterContent.astro"
+
 import AllProducts from "../components/AllProducts.astro"
+import { promise } from "astro:schema";
 
-
-import "../styles/tailwind.css";
 const products = [
   { name: 'Cухофрукты', price: '100₽', image: '/images/almond.jpg' },
   { name: 'Орехи', price: '200₽', image: '/images/almond.jpg' },
@@ -25,25 +22,62 @@ const products = [
   { name: 'Орехи', price: '200₽', image: '/images/almond.jpg' },
 ];
 ---
-
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8">
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Бизнес и хлеб - Главная</title>
-		<link rel="stylesheet" href="/src/styles/global.css">
-	</head>
-	<body>
-		<Header></Header>
-		<Base></Base>
-		<CatalogContent></CatalogContent>
+  <head>
+    <meta charset="UTF-8">
+    <title>Каталог</title>
+  </head>
+  <body>
+    <Header></Header>
+    
 
-		<AllProducts products={products} title="Популярные товары"
-		limit={8}
-		buttontoall = 'Перейти ко всем товарам'></AllProducts>
+    <nav class="head_tovar">
+        <div class="text_cont_head_tovar">
+            <h1>Все товары</h1>
+        </div>
+    </nav>
 
-		<FooterContent></FooterContent>
-	</body>
+    <AllProducts products={products}></AllProducts>
+
+
+  </body>
 </html>
+
+<style>
+    .head_tovar{
+        background-color: rgb(197, 108, 34);
+        color: white;
+        height: 200px;
+        display: flex;
+    }
+    .text_cont_head_tovar{
+        width: 65%;
+        margin: 0 auto;
+        font-size: 35px;
+    }
+    /* --------------------------- */
+    .nav_card_cont{
+        display: flex;
+        flex-wrap: wrap;
+        width: 65%;
+        margin: 0 auto;
+    }
+    .card_container{
+        display: flex;
+        flex-flow: column;
+        flex: 1 1 40%;
+        max-width: 305px;
+        height: 300px;
+        margin: 10px;
+    }
+    .card_container p {
+        
+    }
+    .img_prod{
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+</style>

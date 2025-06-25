@@ -1,0 +1,85 @@
+---
+interface Product {
+  name: string;
+  price: string;
+  image: string;
+}
+interface Props {
+  products: Product[];
+  title?: string;
+  buttontoall?: string;
+  limit?: number;
+}
+const props = Astro.props as Props;
+
+const { products, title = '', buttontoall ='', limit = products.length } = props;
+---
+<nav class="mainnav">
+    {title && <h1 class="Zagolovok">{title}</h1>}
+    <nav class="nav_card_cont">
+            {products.slice(0, limit).map(product => (
+            <div class="card_container">
+            <img class="img_prod"
+                src={product.image} 
+                alt={product.name} 
+            />
+            <div class="overlay"></div>
+            <p class="prod_name">{product.name}</p>
+            </div>
+        ))}
+    </nav>
+    {buttontoall && <a href="/catalog" class="buttontoall">{buttontoall}</a>}
+</nav>
+
+
+<style>
+    .mainnav{
+        width: 65%;
+        margin: 0 auto;
+    }
+    .Zagolovok{
+        font-size: 50px;
+    }
+    .nav_card_cont{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    }
+    .card_container{
+        display: flex;
+        flex-flow: column;
+        flex: 1 1 40%;
+        max-width: 305px;
+        height: 300px;
+        margin: 10px;
+    }
+    .card_container p {
+        
+    }
+    .img_prod{
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+    .buttontoall{
+        display: flex;
+        background-color: rgb(190, 123, 35);
+        color: white;
+        font-size: 30px;
+        padding: 20px;
+        font-family:'Times New Roman', Times, serif;
+        font-weight:400;
+    }
+
+    @media (max-width: 1440px){
+        .card_container{
+            max-width: 250px;
+        }
+    }
+    @media (max-width: 768px) {
+        .Zagolovok{
+            font-size: 35px;
+        }
+    }
+</style>
