@@ -11,75 +11,86 @@ interface Props {
   limit?: number;
 }
 const props = Astro.props as Props;
-
-const { products, title = '', buttontoall ='', limit = products.length } = props;
+const { products, title = '', buttontoall = '', limit = products.length } = props;
 ---
+
 <nav class="mainnav">
-    {title && <h1 class="Zagolovok">{title}</h1>}
-    <nav class="nav_card_cont">
-            {products.slice(0, limit).map(product => (
-            <div class="card_container">
-            <img class="img_prod"
-                src={product.image} 
-                alt={product.name} 
-            />
-            <div class="overlay"></div>
-            <p class="prod_name">{product.name}</p>
-            </div>
-        ))}
-    </nav>
-    {buttontoall && <a href="/catalog" class="buttontoall">{buttontoall}</a>}
+  {title && <h1 class="Zagolovok">{title}</h1>}
+  
+  <nav class="nav_card_cont">
+    {products.slice(0, limit).map(product => (
+      <div 
+        class="card_container cursor-pointer hover:scale-105 transition"
+        onclick={`openModal(${JSON.stringify(product.name)}, ${JSON.stringify(product.image)})`}
+      >
+        <img class="img_prod" src={product.image} alt={product.name} />
+        <div class="overlay"></div>
+        <p class="prod_name">{product.name}</p>
+      </div>
+    ))}
+  </nav>
+
+  {buttontoall && <a href="/catalog" class="buttontoall">{buttontoall}</a>}
 </nav>
 
+<!-- Модальное окно -->
+<div id="myModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-lg max-w-md w-full p-6 relative">
+    <button id="closeModalBtn" class="absolute top-2 right-2 text-gray-500 hover:text-black text-xl">&times;</button>
+    <h2 id="modalTitle" class="text-xl font-semibold mb-4">Заголовок</h2>
+    <img id="modalImage" class="w-full max-h-60 object-cover rounded mb-4" />
+    <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" onclick="closeModal()">Закрыть</button>
+  </div>
+</div>
+
+<!-- Подключение скрипта -->
+<script src="/scripts/modal.js" defer></script>
 
 <style>
-    .mainnav{
-        width: 65%;
-        margin: 0 auto;
-    }
-    .Zagolovok{
-        font-size: 50px;
-    }
-    .nav_card_cont{
+  .mainnav {
+    width: 65%;
+    margin: 0 auto;
+  }
+  .Zagolovok {
+    font-size: 50px;
+  }
+  .nav_card_cont {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    }
-    .card_container{
-        display: flex;
-        flex-flow: column;
-        flex: 1 1 40%;
-        max-width: 305px;
-        height: 300px;
-        margin: 10px;
-    }
-    .card_container p {
-        
-    }
-    .img_prod{
-        width: 100%;
-        max-height: 200px;
-        object-fit: cover;
-        border-radius: 20px;
-    }
-    .buttontoall{
-        display: flex;
-        background-color: rgb(190, 123, 35);
-        color: white;
-        font-size: 30px;
-        padding: 20px;
-        font-family:'Times New Roman', Times, serif;
-        font-weight:400;
-    }
+  }
+  .card_container {
+    display: flex;
+    flex-flow: column;
+    flex: 1 1 40%;
+    max-width: 305px;
+    height: 300px;
+    margin: 10px;
+  }
+  .img_prod {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  .buttontoall {
+    display: flex;
+    background-color: rgb(190, 123, 35);
+    color: white;
+    font-size: 30px;
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+  }
 
-    @media (max-width: 1440px){
-        .card_container{
-            max-width: 250px;
-        }
+  @media (max-width: 1440px) {
+    .card_container {
+      max-width: 250px;
     }
-    @media (max-width: 768px) {
-        .Zagolovok{
-            font-size: 35px;
-        }
+  }
+  @media (max-width: 768px) {
+    .Zagolovok {
+      font-size: 35px;
     }
+  }
 </style>
