@@ -1,15 +1,15 @@
 ---
 const products = [
-  { name: 'Cухофрукты', price: '100₽', image: '/images/suhofr.jfif' },
-  { name: 'Орехи', price: '200₽', image: '/images/oreh.jfif' },
-  { name: 'Цукаты', price: '200₽', image: '/images/cukati.jfif' },
-  { name: 'Сладости', price: '100₽', image: '/images/slad.jfif' },
+  { name: 'Cухофрукты', price: '100₽', image: './images/suhofr.jfif' },
+  { name: 'Орехи', price: '200₽', image: './images/oreh.jfif' },
+  { name: 'Цукаты', price: '200₽', image: './images/cukati.jfif' },
+  { name: 'Сладости', price: '100₽', image: './images/slad.jfif' },
 ];
 ---
 <nav>
   {products.map(product => (
     <div class='cursor-pointer hover:opacity-80 transition' 
-    onclick="window.location.href = '/catalog';" >
+    onclick="window.location.href = './catalog';" >
       <img 
         src={product.image} 
         alt={product.name} 

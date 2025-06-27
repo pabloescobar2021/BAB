@@ -7,7 +7,7 @@
       "units_per_box": 12,
       "weight_per_unit_kg": 1
     },
-    "image": "/images/suhofr.jfif",
+    "image": "./images/suhofr.jfif",
     "availability": "В наличии",
     "article_number": "MSW120000020",
     "country_of_origin": "Китай",
