@@ -1,11 +1,8 @@
 ---
-interface Product {
-  name: string;
-  price: string;
-  image: string;
-}
+import type { Product } from '../utils/getProducts';
+
 interface Props {
-  products: Product[];
+  products: Partial<Product>[];
   title?: string;
   buttontoall?: string;
   limit?: number;
@@ -21,7 +18,13 @@ const { products, title = '', buttontoall = '', limit = products.length } = prop
     {products.slice(0, limit).map(product => (
       <div 
         class="card_container cursor-pointer hover:scale-105 transition"
-        onclick={`openModal(${JSON.stringify(product.name)}, ${JSON.stringify(product.image)})`}
+        data-name={product.name}
+        data-image={product.image}
+        data-availability={product.availability} 
+        data-description={product.description}
+        data-storage={JSON.stringify(product.storage || {})}
+        data-nutritional={JSON.stringify(product.nutritional_value_per_100g || {})}
+        onclick="openModal(this)"
       >
         <img class="img_prod" src={product.image} alt={product.name} />
         <div class="overlay"></div>
@@ -34,11 +37,39 @@ const { products, title = '', buttontoall = '', limit = products.length } = prop
 </nav>
 
 <!-- Модальное окно -->
-<div id="myModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-  <div class="bg-white rounded-lg shadow-lg max-w-md w-full p-6 relative">
+<div id="myModal" class=" fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-lg max-w-4xl w-full p-6 relative">
     <button id="closeModalBtn" class="absolute top-2 right-2 text-gray-500 hover:text-black text-xl">&times;</button>
     <h2 id="modalTitle" class="text-xl font-semibold mb-4">Заголовок</h2>
-    <img id="modalImage" class="w-full max-h-60 object-cover rounded mb-4" />
+    <img id="modalImage" class="w-60 max-h-60 object-cover rounded mb-4 m-auto" />
+    <p id="available" class="text-xl font-semibold mb-4"></p>
+    <p id="description" class="text-xl mb-4"></p>
+
+    <p id="storageShelfLife"></p>
+    <p id="storageConditions"></p>
+
+    <div class="flex bg-gray-300 rounded-lg items-center justify-center ">
+      <div>
+        <p>Белки</p>
+        <p id="prot"></p>
+      </div>
+
+      <div>
+        <p>Жиры</p>
+        <p id="fat"></p>
+      </div>
+
+      <div>
+        <p>Углеводы</p>
+        <p id="ugli"></p>
+      </div>
+
+      <div>
+        <p>Эн.ценность</p>
+        <p id="kcal"></p>
+      </div>
+    </div>
+
     <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" onclick="closeModal()">Закрыть</button>
   </div>
 </div>
@@ -47,12 +78,15 @@ const { products, title = '', buttontoall = '', limit = products.length } = prop
 <script src="/scripts/modal.js" defer></script>
 
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;700&display=swap');
+
   .mainnav {
-    width: 65%;
+    width: 90%;
     margin: 0 auto;
+    margin-top: 50px;
   }
   .Zagolovok {
-    font-size: 50px;
+    font-size: 75px;
   }
   .nav_card_cont {
     display: flex;
@@ -75,12 +109,13 @@ const { products, title = '', buttontoall = '', limit = products.length } = prop
   }
   .buttontoall {
     display: flex;
-    background-color: rgb(190, 123, 35);
+    background-color: rgb(224, 155, 65);
     color: white;
     font-size: 30px;
     padding: 20px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 400;
+    border-radius: 10px;
   }
 
   @media (max-width: 1440px) {

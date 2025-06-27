@@ -1,0 +1,119 @@
+<section class="meva-style">
+  <div class="meva-container fade-in">
+    <div class="meva-info">
+      <h2>Многолетний опыт импорта и производства</h2>
+      <p>
+        Мы занимаемся орехами, сухофруктами, сладостями и соками. Если вы цените качество — выбирайте нас.<br>
+        <span class="highlight">C 2004 года</span> успешно на рынке.
+      </p>
+    </div>
+    <div class="meva-stats">
+      <div class="stat">
+        <span class="num">19</span>
+        <span class="label">лет успешного опыта</span>
+      </div>
+      <div class="stat">
+        <span class="num">13 000</span>
+        <span class="label">тонн поставленной продукции</span>
+      </div>
+      <div class="stat">
+        <span class="num">50 K</span>
+        <span class="label">довольных клиентов</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.meva-style {
+  background: #ffffff;
+  padding: 80px 20px;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.meva-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  align-items: center;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.meva-info {
+  flex: 1 1 500px;
+}
+
+.meva-info h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #3b2f2f;
+  font-weight: 700;
+}
+
+.meva-info p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.highlight {
+  font-weight: 600;
+  color: #5a1f1f;
+}
+
+.meva-stats {
+  flex: 1 1 400px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.stat {
+  flex: 1 1 120px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(34, 60, 80, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.stat:hover {
+  transform: translateY(-4px);
+}
+
+.num {
+  display: block;
+  font-size: 32px;
+  font-weight: 700;
+  color: #5a1f1f;
+  margin-bottom: 8px;
+}
+
+.label {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .meva-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .meva-stats {
+    justify-content: center;
+  }
+}
+</style>

@@ -4,26 +4,10 @@ import Base from "../components/Base.astro"
 import CatalogContent from "../components/CatalogContent.astro"
 import FooterContent from "../components/FooterContent.astro"
 import AllProducts from "../components/AllProducts.astro"
+import WhyUsComp from "../components/whyUsComp.astro"
 
-
-
-const products = [
-  { name: 'Cухофрукты', price: '100₽', image: '/images/almond.jpg' },
-  { name: 'Орехи', price: '200₽', image: '/images/almond.jpg' },
-  { name: 'Перец', price: '200₽', image: '/images/almond.jpg' },
-  { name: 'Изюм', price: '100₽', image: '/images/almond.jpg' },
-  { name: 'Орехи', price: '200₽', image: '/images/almond.jpg' },
-  { name: 'Cухофрукты', price: '100₽', image: '/images/almond.jpg' },
-  { name: 'Орехи', price: '200₽', image: '/images/almond.jpg' },
-  { name: 'Перец', price: '200₽', image: '/images/almond.jpg' },
-  { name: 'Изюм', price: '100₽', image: '/images/almond.jpg' },
-  { name: 'Орехи', price: '200₽', image: '/images/almond.jpg' },
-  { name: 'Cухофрукты', price: '100₽', image: '/images/almond.jpg' },
-  { name: 'Орехи', price: '200₽', image: '/images/almond.jpg' },
-  { name: 'Перец', price: '200₽', image: '/images/almond.jpg' },
-  { name: 'Изюм', price: '100₽', image: '/images/almond.jpg' },
-  { name: 'Орехи', price: '200₽', image: '/images/almond.jpg' },
-];
+import { getProducts } from "../utils/getProducts"
+const products = getProducts({ fields: ['name', 'image']});
 ---
 
 <html lang="ru">
@@ -44,6 +28,7 @@ const products = [
 		limit={8}
 		buttontoall = 'Перейти ко всем товарам'></AllProducts>
 
+		<WhyUsComp></WhyUsComp>
 		<FooterContent></FooterContent>
 	</body>
 </html>

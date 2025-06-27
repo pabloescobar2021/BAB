@@ -1,26 +1,9 @@
 ---
 import Header from "../components/Header.astro"
-
 import AllProducts from "../components/AllProducts.astro"
-import { promise } from "astro:schema";
 
-const products = [
-  { name: 'Cухофрукты', price: '100₽', image: '/images/almond.jpg' },
-  { name: 'Орехи', price: '200₽', image: '/images/almond.jpg' },
-  { name: 'Перец', price: '200₽', image: '/images/almond.jpg' },
-  { name: 'Изюм', price: '100₽', image: '/images/almond.jpg' },
-  { name: 'Орехи', price: '200₽', image: '/images/almond.jpg' },
-  { name: 'Cухофрукты', price: '100₽', image: '/images/almond.jpg' },
-  { name: 'Орехи', price: '200₽', image: '/images/almond.jpg' },
-  { name: 'Перец', price: '200₽', image: '/images/almond.jpg' },
-  { name: 'Изюм', price: '100₽', image: '/images/almond.jpg' },
-  { name: 'Орехи', price: '200₽', image: '/images/almond.jpg' },
-  { name: 'Cухофрукты', price: '100₽', image: '/images/almond.jpg' },
-  { name: 'Орехи', price: '200₽', image: '/images/almond.jpg' },
-  { name: 'Перец', price: '200₽', image: '/images/almond.jpg' },
-  { name: 'Изюм', price: '100₽', image: '/images/almond.jpg' },
-  { name: 'Орехи', price: '200₽', image: '/images/almond.jpg' },
-];
+import { getProducts } from "../utils/getProducts";
+const products = getProducts();
 ---
 <html lang="ru">
   <head>

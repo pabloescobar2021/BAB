@@ -1,0 +1,261 @@
+[
+  {
+    "name": "Желейные конфеты JELLY-BEANS «Светлые»",
+    "weight_per_unit_g": 1000,
+    "packaging": {
+      "total_weight_kg": 12,
+      "units_per_box": 12,
+      "weight_per_unit_kg": 1
+    },
+    "image": "/images/suhofr.jfif",
+    "availability": "В наличии",
+    "article_number": "MSW120000020",
+    "country_of_origin": "Китай",
+    "description": "Желейные конфеты Jelly beans - это маленькие, яркие и ароматные сладости, которые прекрасно сочетают в себе вкус и разнообразие. Эти вкусные конфеты представляют собой желейные шарики различных цветов и вкусов, начиная от фруктовых до экзотических комбинаций. Они идеальны для любителей сладостей и тех, кто хочет испытать что-то новое.",
+    "composition": [
+      "сахар",
+      "патока",
+      "модифицированный картофельный крахмал",
+      "лимонная кислота",
+      "цитрат натрия",
+      "ароматизаторы",
+      "шеллак",
+      "пчелиный воск",
+      "карнаубский воск",
+      "оливковое масло",
+      "Е102",
+      "Е129"
+    ],
+    "storage": {
+      "shelf_life_months": 24,
+      "conditions": "Хранить в прохладном сухом месте при температуре от 15-25 °C и при относительной влажности воздуха не более 50%."
+    },
+    "delivery": "Доставка по всей России и СНГ от одного дня",
+    "nutritional_value_per_100g": {
+      "proteins_g": 0,
+      "fats_g": 0.3,
+      "carbohydrates_g": 89,
+      "energy_kcal": 361
+    }
+  },
+  {
+    "name": "Мед натуральный",
+    "weight_per_unit_g": 500,
+    "packaging": {
+      "total_weight_kg": 6,
+      "units_per_box": 12,
+      "weight_per_unit_kg": 0.5
+    },
+    "image": "/images/suhofr.jfif",
+    "availability": "В наличии",
+    "article_number": "MSW120000021",
+    "country_of_origin": "Россия",
+    "description": "Натуральный мёд высокого качества, собранный с лучших пасек. Имеет приятный аромат и богатый вкус.",
+    "composition": [
+      "натуральный мёд"
+    ],
+    "storage": {
+      "shelf_life_months": 36,
+      "conditions": "Хранить при температуре от 5 до 25 °C в сухом месте."
+    },
+    "delivery": "Доставка по всей России и СНГ от одного дня",
+    "nutritional_value_per_100g": {
+      "proteins_g": 0.3,
+      "fats_g": 0,
+      "carbohydrates_g": 80,
+      "energy_kcal": 320
+    }
+  },
+    {
+    "name": "Мед натуральный",
+    "weight_per_unit_g": 500,
+    "packaging": {
+      "total_weight_kg": 6,
+      "units_per_box": 12,
+      "weight_per_unit_kg": 0.5
+    },
+    "image": "/images/suhofr.jfif",
+    "availability": "В наличии",
+    "article_number": "MSW120000021",
+    "country_of_origin": "Россия",
+    "description": "Натуральный мёд высокого качества, собранный с лучших пасек. Имеет приятный аромат и богатый вкус.",
+    "composition": [
+      "натуральный мёд"
+    ],
+    "storage": {
+      "shelf_life_months": 36,
+      "conditions": "Хранить при температуре от 5 до 25 °C в сухом месте."
+    },
+    "delivery": "Доставка по всей России и СНГ от одного дня",
+    "nutritional_value_per_100g": {
+      "proteins_g": 0.3,
+      "fats_g": 0,
+      "carbohydrates_g": 80,
+      "energy_kcal": 320
+    }
+  },
+    {
+    "name": "Мед натуральный",
+    "weight_per_unit_g": 500,
+    "packaging": {
+      "total_weight_kg": 6,
+      "units_per_box": 12,
+      "weight_per_unit_kg": 0.5
+    },
+    "image": "/images/suhofr.jfif",
+    "availability": "В наличии",
+    "article_number": "MSW120000021",
+    "country_of_origin": "Россия",
+    "description": "Натуральный мёд высокого качества, собранный с лучших пасек. Имеет приятный аромат и богатый вкус.",
+    "composition": [
+      "натуральный мёд"
+    ],
+    "storage": {
+      "shelf_life_months": 36,
+      "conditions": "Хранить при температуре от 5 до 25 °C в сухом месте."
+    },
+    "delivery": "Доставка по всей России и СНГ от одного дня",
+    "nutritional_value_per_100g": {
+      "proteins_g": 0.3,
+      "fats_g": 0,
+      "carbohydrates_g": 80,
+      "energy_kcal": 320
+    }
+  },
+    {
+    "name": "Мед натуральный",
+    "weight_per_unit_g": 500,
+    "packaging": {
+      "total_weight_kg": 6,
+      "units_per_box": 12,
+      "weight_per_unit_kg": 0.5
+    },
+    "image": "/images/suhofr.jfif",
+    "availability": "В наличии",
+    "article_number": "MSW120000021",
+    "country_of_origin": "Россия",
+    "description": "Натуральный мёд высокого качества, собранный с лучших пасек. Имеет приятный аромат и богатый вкус.",
+    "composition": [
+      "натуральный мёд"
+    ],
+    "storage": {
+      "shelf_life_months": 36,
+      "conditions": "Хранить при температуре от 5 до 25 °C в сухом месте."
+    },
+    "delivery": "Доставка по всей России и СНГ от одного дня",
+    "nutritional_value_per_100g": {
+      "proteins_g": 0.3,
+      "fats_g": 0,
+      "carbohydrates_g": 80,
+      "energy_kcal": 320
+    }
+  },  {
+    "name": "Мед натуральный",
+    "weight_per_unit_g": 500,
+    "packaging": {
+      "total_weight_kg": 6,
+      "units_per_box": 12,
+      "weight_per_unit_kg": 0.5
+    },
+    "image": "/images/suhofr.jfif",
+    "availability": "В наличии",
+    "article_number": "MSW120000021",
+    "country_of_origin": "Россия",
+    "description": "Натуральный мёд высокого качества, собранный с лучших пасек. Имеет приятный аромат и богатый вкус.",
+    "composition": [
+      "натуральный мёд"
+    ],
+    "storage": {
+      "shelf_life_months": 36,
+      "conditions": "Хранить при температуре от 5 до 25 °C в сухом месте."
+    },
+    "delivery": "Доставка по всей России и СНГ от одного дня",
+    "nutritional_value_per_100g": {
+      "proteins_g": 0.3,
+      "fats_g": 0,
+      "carbohydrates_g": 80,
+      "energy_kcal": 320
+    }
+  },  {
+    "name": "Мед натуральный",
+    "weight_per_unit_g": 500,
+    "packaging": {
+      "total_weight_kg": 6,
+      "units_per_box": 12,
+      "weight_per_unit_kg": 0.5
+    },
+    "image": "/images/suhofr.jfif",
+    "availability": "В наличии",
+    "article_number": "MSW120000021",
+    "country_of_origin": "Россия",
+    "description": "Натуральный мёд высокого качества, собранный с лучших пасек. Имеет приятный аромат и богатый вкус.",
+    "composition": [
+      "натуральный мёд"
+    ],
+    "storage": {
+      "shelf_life_months": 36,
+      "conditions": "Хранить при температуре от 5 до 25 °C в сухом месте."
+    },
+    "delivery": "Доставка по всей России и СНГ от одного дня",
+    "nutritional_value_per_100g": {
+      "proteins_g": 0.3,
+      "fats_g": 0,
+      "carbohydrates_g": 80,
+      "energy_kcal": 320
+    }
+  },  {
+    "name": "Мед натуральный",
+    "weight_per_unit_g": 500,
+    "packaging": {
+      "total_weight_kg": 6,
+      "units_per_box": 12,
+      "weight_per_unit_kg": 0.5
+    },
+    "image": "/images/suhofr.jfif",
+    "availability": "В наличии",
+    "article_number": "MSW120000021",
+    "country_of_origin": "Россия",
+    "description": "Натуральный мёд высокого качества, собранный с лучших пасек. Имеет приятный аромат и богатый вкус.",
+    "composition": [
+      "натуральный мёд"
+    ],
+    "storage": {
+      "shelf_life_months": 36,
+      "conditions": "Хранить при температуре от 5 до 25 °C в сухом месте."
+    },
+    "delivery": "Доставка по всей России и СНГ от одного дня",
+    "nutritional_value_per_100g": {
+      "proteins_g": 0.3,
+      "fats_g": 0,
+      "carbohydrates_g": 80,
+      "energy_kcal": 320
+    }
+  },  {
+    "name": "Мед натуральный",
+    "weight_per_unit_g": 500,
+    "packaging": {
+      "total_weight_kg": 6,
+      "units_per_box": 12,
+      "weight_per_unit_kg": 0.5
+    },
+    "image": "/images/suhofr.jfif",
+    "availability": "В наличии",
+    "article_number": "MSW120000021",
+    "country_of_origin": "Россия",
+    "description": "Натуральный мёд высокого качества, собранный с лучших пасек. Имеет приятный аромат и богатый вкус.",
+    "composition": [
+      "натуральный мёд"
+    ],
+    "storage": {
+      "shelf_life_months": 36,
+      "conditions": "Хранить при температуре от 5 до 25 °C в сухом месте."
+    },
+    "delivery": "Доставка по всей России и СНГ от одного дня",
+    "nutritional_value_per_100g": {
+      "proteins_g": 0.3,
+      "fats_g": 0,
+      "carbohydrates_g": 80,
+      "energy_kcal": 320
+    }
+  }
+]
